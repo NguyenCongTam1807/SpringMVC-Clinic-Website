@@ -80,7 +80,7 @@
 <section class="page-section-ptb">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 banner-img xs-mb-15 sm-mb-30"><a href="javascript:void(0)"><img class="img-fluid w-100" src="<%=request.getContextPath()%>/teamplate/public/images/banner/add_banner03.jpg" alt=""></a> </div>
+      <div class="col-lg-12 banner-img xs-mb-15 sm-mb-30"><a href="javascript:void(0)"><img class="img-fluid w-100" src="<%=request.getContextPath()%>/template/public/images/banner/add_banner03.jpg" alt=""></a> </div>
     </div>
   </div>
 </section>

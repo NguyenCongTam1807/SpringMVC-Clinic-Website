@@ -56,7 +56,7 @@
                         <p class="quantity text-center ml-150 bg-white">${cart.quantity}</p>
                       </div></td>
                       <td>${cart.total} đ</td>
-                      <td class="remove-product"><a href="${pageContext.request.contextPath}/gio-hang/del?id=${cart.id}&oderId=${oder.id}&total=${cart.total}&oderTotal=${oder.total}"><i class="fas fa-trash-alt"></i></a></td>
+                      <td class="remove-product"><a href="${pageContext.request.contextPath}/gio-hang/del?id=${cart.id}&orderId=${order.id}&total=${cart.total}&orderTotal=${order.total}"><i class="fas fa-trash-alt"></i></a></td>
                     </tr>
                   </c:forEach>
                 </c:when>
@@ -79,7 +79,7 @@
 
       </div>
 
-        <c:if test="${not empty oder}">
+        <c:if test="${not empty order}">
           <div class="col-lg-4 col-md-6">
             <div class="main-block">
               <div class="filter-title">
@@ -88,11 +88,11 @@
               <table class="table table-borderless mb-0">
                 <tr class="border-theme">
                   <td>Tổng tiền</td>
-                  <td class="float-right">${oder.total} đ</td>
+                  <td class="float-right">${order.total} đ</td>
                 </tr>
                 </tbody>
               </table>
-              <div class="text-center"> <a class="btn black-button animated slideInRight" href="${pageContext.request.contextPath}/pay?id=${oder.id}">Xử lý tóa thuốc <i class="fas fa-arrow-alt-circle-right"></i></a> </div>
+              <div class="text-center"> <a class="btn black-button animated slideInRight" href="${pageContext.request.contextPath}/pay?id=${order.id}">Xử lý tóa thuốc <i class="fas fa-arrow-alt-circle-right"></i></a> </div>
             </div>
           </div>
         </c:if>

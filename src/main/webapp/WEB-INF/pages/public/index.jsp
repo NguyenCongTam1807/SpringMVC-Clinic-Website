@@ -13,7 +13,7 @@
     <div class="carousel-inner">
 
       <div class="carousel-inner">
-        <div class="carousel-item active"> <img class="img-fluid" src="<%=request.getContextPath()%>/teamplate/public/images/banner/14.jpg" alt="Banner 1">
+        <div class="carousel-item active"> <img class="img-fluid" src="<%=request.getContextPath()%>/template/public/images/banner/14.jpg" alt="Banner 1">
           <div class="slider-content">
             <div class="container">
               <div class="row">
@@ -41,15 +41,15 @@
 <section class="page-section-pt">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4 col-md-4 text-center hvr-wobble-horizontal"> <img class="img-fluid service-img" src="<%=request.getContextPath()%>/teamplate/public/images/fast-delivery.png" alt="">
+      <div class="col-lg-4 col-md-4 text-center hvr-wobble-horizontal"> <img class="img-fluid service-img" src="<%=request.getContextPath()%>/template/public/images/fast-delivery.png" alt="">
         <h4>Fast Shipping</h4>
         <p>Lorem ipsum dolor sit amet</p>
       </div>
-      <div class="col-lg-4 col-md-4 text-center hvr-wobble-horizontal"> <img class="img-fluid service-img" src="<%=request.getContextPath()%>/teamplate/public/images/credit-card.png" alt="">
+      <div class="col-lg-4 col-md-4 text-center hvr-wobble-horizontal"> <img class="img-fluid service-img" src="<%=request.getContextPath()%>/template/public/images/credit-card.png" alt="">
         <h4>Secure Payment</h4>
         <p>Lorem ipsum dolor sit amet</p>
       </div>
-      <div class="col-lg-4 col-md-4 text-center hvr-wobble-horizontal"> <img class="img-fluid service-img" src="<%=request.getContextPath()%>/teamplate/public/images/customer-service.png" alt="">
+      <div class="col-lg-4 col-md-4 text-center hvr-wobble-horizontal"> <img class="img-fluid service-img" src="<%=request.getContextPath()%>/template/public/images/customer-service.png" alt="">
         <h4>Customer Support</h4>
         <p>Lorem ipsum dolor sit amet</p>
       </div>
@@ -91,14 +91,14 @@
 <section class="page-section-ptb">
   <div class="container">
     <div class="row">
-      <div class="col-lg-2 col-md-2 col-sm-4 col-4"> <img class="img-fluid brand" src="<%=request.getContextPath()%>/teamplate/public/images/brands/01.png" alt="">
+      <div class="col-lg-2 col-md-2 col-sm-4 col-4"> <img class="img-fluid brand" src="<%=request.getContextPath()%>/template/public/images/brands/01.png" alt="">
         <div class="blog-effect"></div>
       </div>
-      <div class="col-lg-2 col-md-2 col-sm-4 col-4"> <img class="img-fluid brand" src="<%=request.getContextPath()%>/teamplate/public/images/brands/02.png" alt=""> </div>
-      <div class="col-lg-2 col-md-2 col-sm-4 col-4"> <img class="img-fluid brand" src="<%=request.getContextPath()%>/teamplate/public/images/brands/03.png" alt=""> </div>
-      <div class="col-lg-2 col-md-2 col-sm-4 col-4"> <img class="img-fluid brand" src="<%=request.getContextPath()%>/teamplate/public/images/brands/04.png" alt=""> </div>
-      <div class="col-lg-2 col-md-2 col-sm-4 col-4"> <img class="img-fluid brand" src="<%=request.getContextPath()%>/teamplate/public/images/brands/05.png" alt=""> </div>
-      <div class="col-lg-2 col-md-2 col-sm-4 col-4"> <img class="img-fluid brand" src="<%=request.getContextPath()%>/teamplate/public/images/brands/06.png" alt=""> </div>
+      <div class="col-lg-2 col-md-2 col-sm-4 col-4"> <img class="img-fluid brand" src="<%=request.getContextPath()%>/template/public/images/brands/02.png" alt=""> </div>
+      <div class="col-lg-2 col-md-2 col-sm-4 col-4"> <img class="img-fluid brand" src="<%=request.getContextPath()%>/template/public/images/brands/03.png" alt=""> </div>
+      <div class="col-lg-2 col-md-2 col-sm-4 col-4"> <img class="img-fluid brand" src="<%=request.getContextPath()%>/template/public/images/brands/04.png" alt=""> </div>
+      <div class="col-lg-2 col-md-2 col-sm-4 col-4"> <img class="img-fluid brand" src="<%=request.getContextPath()%>/template/public/images/brands/05.png" alt=""> </div>
+      <div class="col-lg-2 col-md-2 col-sm-4 col-4"> <img class="img-fluid brand" src="<%=request.getContextPath()%>/template/public/images/brands/06.png" alt=""> </div>
     </div>
   </div>
 </section>

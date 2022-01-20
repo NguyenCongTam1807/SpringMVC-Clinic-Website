@@ -1,11 +1,4 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: admin
-  Date: 11/23/21
-  Time: 4:19 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
@@ -13,10 +6,10 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>E-shoppers - Responsive Multi-purpose HTML5 Template</title>
+    <title>Phòng khám tư nhân - Công Tâm - CS92</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="<%=request.getContextPath()%>/teamplate/public/images/favicon.ico">
+    <link rel="shortcut icon" href="<%=request.getContextPath()%>/template/public/images/favicon.ico">
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,23 +17,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Plugins -->
-    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/teamplate/public/css/plugins-css.css">
+    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/template/public/css/plugins-css.css">
 
     <!-- Typography -->
-    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/teamplate/public/css/typography.css">
+    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/template/public/css/typography.css">
 
     <!-- Style -->
-    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/teamplate/public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/template/public/css/style.css">
 
     <!-- Responsive -->
-    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/teamplate/public/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/template/public/css/responsive.css">
 </head>
 
 <body>
 
 <!--===== header start =====-->
 
-<div class="wrapper">
+<body class="wrapper">
 
     <!--===== header =====-->
 
@@ -56,7 +49,7 @@
                         <div class="col-lg-12 col-md-12">
                             <!-- menu logo -->
                             <ul class="menu-logo">
-                                <li> <a href="${pageContext.request.contextPath}/trang-chu"><img id="logo_img" src="<%=request.getContextPath()%>/teamplate/public/images/logo.png" alt="logo"> </a> </li>
+                                <li> <a href="${pageContext.request.contextPath}/trang-chu"><img id="logo_img" src="<%=request.getContextPath()%>/template/public/images/logo.png" alt="logo"> </a> </li>
                             </ul>
                             <!-- menu links -->
                             <div class="menu-bar">
@@ -114,7 +107,7 @@
                                                     </c:forEach>
 
                                                     <div class="cart-total">
-                                                        <h6 class="mb-15"> Tổng tiền: ${oder.total} đ</h6>
+                                                        <h6 class="mb-15"> Tổng tiền: ${order.total} đ</h6>
                                                         <div class="d-flex justify-content-center mb-10"> <a class="btn theme-button" href="${pageContext.request.contextPath}/gio-hang">Xem giỏ hàng</a> </div>
                                                     </div>
                                                 </c:when>
@@ -150,9 +143,9 @@
                                                         <c:if test="${employee.userType == 0}">
                                                             <li><a href="${pageContext.request.contextPath}/manager/medicinetype">Admin</a></li>
                                                         </c:if>
-                                                        <c:if test="${employee.userType == 1}">
+<%--                                                        <c:if test="${employee.userType == 1}">--%>
 
-                                                        </c:if>
+<%--                                                        </c:if>--%>
                                                         <li><a href="${pageContext.request.contextPath}/thong-tin">Đổi mật khẩu</a></li>
                                                         <li><a href="${pageContext.request.contextPath}/dang-xuat">Đăng&nbsp;xuất</a></li>
                                                     </c:otherwise>
@@ -165,8 +158,10 @@
                         </div>
                     </div>
                 </div>
+                </div>
             </section>
         </nav>
         <!-- menu end -->
     </div>
 </header>
+</body>

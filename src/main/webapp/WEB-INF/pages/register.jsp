@@ -15,13 +15,13 @@
     <title>SB Admin 2 - Login</title>
 
     <!-- Custom fonts for this template-->
-    <link href="<%=request.getContextPath()%>/teamplate/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="<%=request.getContextPath()%>/template/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="<%=request.getContextPath()%>/teamplate/admin/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="<%=request.getContextPath()%>/template/admin/css/sb-admin-2.min.css" rel="stylesheet">
     <style>
         .error{
             padding-top: 5px;
@@ -96,15 +96,15 @@
 
 
 <!-- Bootstrap core JavaScript-->
-<script src="<%=request.getContextPath()%>/teamplate/admin/vendor/jquery/jquery.min.js"></script>
+<script src="<%=request.getContextPath()%>/template/admin/vendor/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
-<script src="<%=request.getContextPath()%>/teamplate/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="<%=request.getContextPath()%>/template/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="<%=request.getContextPath()%>/teamplate/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="<%=request.getContextPath()%>/template/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="<%=request.getContextPath()%>/teamplate/admin/js/sb-admin-2.min.js"></script>
+<script src="<%=request.getContextPath()%>/template/admin/js/sb-admin-2.min.js"></script>
 </body>
 
 
@@ -140,21 +140,21 @@
                 {
                     "name":
                         {
-                            required: "Vui lòng nhập"
+                            required: "Vui lòng nhập họ tên"
                         },
                     "email":{
-                        required: "vui lòng nhập",
-                        email: "Nhập đúng định dạng"
+                        required: "Vui lòng nhập email",
+                        email: "Nhập sai định dạng"
                     },
                     "password":{
-                        required:"Vui lòng nhập",
-                        minlength: "Nhập ít nhất 6 kí tự",
-                        maxlength: "Nhập nhiều nhất 30 kí tự",
+                        required:"Vui lòng nhập mật khẩu",
+                        minlength: "Tối thiểu 6 kí tự",
+                        maxlength: "Tối đa 30 kí tự",
                     },
                     "repassword":{
-                        required: "Vui lòng nhập",
-                        minlength: "Nhập ít nhất 6 kí tự",
-                        maxlength: "Nhập nhiều nhất 30 kí tự",
+                        required: "Vui lòng nhập lại mật khẩu",
+                        minlength: "Tối thiểu 6 kí tự",
+                        maxlength: "Tối đa 30 kí tự",
                         equalTo: "Mật khẩu không khớp"
                     }
                 }

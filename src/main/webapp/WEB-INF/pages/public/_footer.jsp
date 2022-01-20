@@ -45,7 +45,7 @@
             <div class="col-lg-6 col-md-4 col-6 xs-mt-20">
                 <div class="footer-link footer-hedding">
                     <h6 class="text-white mb-30 mt-10 text-uppercase">Instagram</h6>
-                    <a href="javascript:void(0)"><img class="img-fluid insta-img" src="<%=request.getContextPath()%>/teamplate/public/images/instafeeds/01.jpg" alt=""></a><a href="javascript:void(0)"><img class="img-fluid insta-img" src="<%=request.getContextPath()%>/teamplate/public/images/instafeeds/02.jpg" alt=""></a><a href="javascript:void(0)"><img class="img-fluid insta-img" src="<%=request.getContextPath()%>/teamplate/public/images/instafeeds/03.jpg" alt=""></a><a href="javascript:void(0)"><img class="img-fluid insta-img" src="<%=request.getContextPath()%>/teamplate/public/images/instafeeds/04.jpg" alt=""></a><a href="javascript:void(0)"><img class="img-fluid insta-img" src="<%=request.getContextPath()%>/teamplate/public/images/instafeeds/05.jpg" alt=""></a> </div>
+                    <a href="javascript:void(0)"><img class="img-fluid insta-img" src="<%=request.getContextPath()%>/template/public/images/instafeeds/01.jpg" alt=""></a><a href="javascript:void(0)"><img class="img-fluid insta-img" src="<%=request.getContextPath()%>/template/public/images/instafeeds/02.jpg" alt=""></a><a href="javascript:void(0)"><img class="img-fluid insta-img" src="<%=request.getContextPath()%>/template/public/images/instafeeds/03.jpg" alt=""></a><a href="javascript:void(0)"><img class="img-fluid insta-img" src="<%=request.getContextPath()%>/template/public/images/instafeeds/04.jpg" alt=""></a><a href="javascript:void(0)"><img class="img-fluid insta-img" src="<%=request.getContextPath()%>/template/public/images/instafeeds/05.jpg" alt=""></a> </div>
             </div>
         </div>
         <div class="footer-copyright">
@@ -53,7 +53,7 @@
                 <div class="col-lg-6 col-md-8">
                     <p> ©Copyright 2019 <a href="index.jsp"> e-shoppers </a> All Rights Reserved </p>
                 </div>
-                <div class="col-lg-6 col-md-4"> <a href="javascript:void(0)"><img class="img-fluid float-right xs-left" src="<%=request.getContextPath()%>/teamplate/public/images/payment.png" alt=""></a> </div>
+                <div class="col-lg-6 col-md-4"> <a href="javascript:void(0)"><img class="img-fluid float-right xs-left" src="<%=request.getContextPath()%>/template/public/images/payment.png" alt=""></a> </div>
             </div>
         </div>
     </div>
@@ -64,17 +64,17 @@
 <!--===== jquery =====-->
 
 <!-- jquery -->
-<script src="<%=request.getContextPath()%>/teamplate/public/js/jquery-3.3.1.min.js"></script>
-<script src="<%=request.getContextPath()%>/teamplate/public/js/bootstrap.min.js"></script>
-<script src="<%=request.getContextPath()%>/teamplate/public/js/font-aweosme.min.js"></script>
-<script src="<%=request.getContextPath()%>/teamplate/public/js/mega_menu.js"></script>
-<script src="<%=request.getContextPath()%>/teamplate/public/js/slick.min.js"></script>
-<script src="<%=request.getContextPath()%>/teamplate/public/js/swiper.min.js"></script>
+<script src="<%=request.getContextPath()%>/template/public/js/jquery-3.3.1.min.js"></script>
+<script src="<%=request.getContextPath()%>/template/public/js/bootstrap.min.js"></script>
+<script src="<%=request.getContextPath()%>/template/public/js/font-aweosme.min.js"></script>
+<script src="<%=request.getContextPath()%>/template/public/js/mega_menu.js"></script>
+<script src="<%=request.getContextPath()%>/template/public/js/slick.min.js"></script>
+<script src="<%=request.getContextPath()%>/template/public/js/swiper.min.js"></script>
 
 <!-- plugin_path -->
-<script>var plugin_path = '<%=request.getContextPath()%>/teamplate/public/js/';</script>
+<script>var plugin_path = '<%=request.getContextPath()%>/template/public/js/';</script>
 
 <!-- custom -->
-<script src="<%=request.getContextPath()%>/teamplate/public/js/custom.js"></script>
+<script src="<%=request.getContextPath()%>/template/public/js/custom.js"></script>
 </body>
 </html>

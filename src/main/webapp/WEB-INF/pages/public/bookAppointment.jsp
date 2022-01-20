@@ -22,15 +22,15 @@
                 <div class="row">
                     <div class="col-lg-8 offset-lg-2">
                         <div class="row">
-                            <div class="col-lg-4 col-md-4 text-center hvr-wobble-horizontal"> <img class="img-fluid service-img" src="<%=request.getContextPath()%>/teamplate/public/images/address.png" alt="">
+                            <div class="col-lg-4 col-md-4 text-center hvr-wobble-horizontal"> <img class="img-fluid service-img" src="<%=request.getContextPath()%>/template/public/images/address.png" alt="">
                                 <h4>Address</h4>
                                 <p>xyz, Đà Nẵng</p>
                             </div>
-                            <div class="col-lg-4 col-md-4 text-center hvr-wobble-horizontal"> <img class="img-fluid service-img" src="<%=request.getContextPath()%>/teamplate/public/images/phone.png" alt="">
+                            <div class="col-lg-4 col-md-4 text-center hvr-wobble-horizontal"> <img class="img-fluid service-img" src="<%=request.getContextPath()%>/template/public/images/phone.png" alt="">
                                 <h4>Phone</h4>
                                 <p>+(012) 456 789</p>
                             </div>
-                            <div class="col-lg-4 col-md-4 text-center hvr-wobble-horizontal"> <img class="img-fluid service-img" src="<%=request.getContextPath()%>/teamplate/public/images/mail.png" alt="">
+                            <div class="col-lg-4 col-md-4 text-center hvr-wobble-horizontal"> <img class="img-fluid service-img" src="<%=request.getContextPath()%>/template/public/images/mail.png" alt="">
                                 <h4>Email</h4>
                                 <p>info@demo.com</p>
                             </div>

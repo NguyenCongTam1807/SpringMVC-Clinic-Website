@@ -18,7 +18,7 @@
 <section class="page-section-ptb">
     <div class="container">
         <div class="align-content-center">
-            <p class="text-center"><img  width="100px" id="logo_img" src="<%=request.getContextPath()%>/teamplate/public/images/checked.png" alt="logo"></p>
+            <p class="text-center"><img  width="100px" id="logo_img" src="<%=request.getContextPath()%>/template/public/images/checked.png" alt="logo"></p>
             <p class="text-success text-center">Bạn đã đặt lịch thành công</p>
         </div>
     </div>

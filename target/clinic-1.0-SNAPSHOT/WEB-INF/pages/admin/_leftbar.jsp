@@ -13,7 +13,7 @@
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Shop Giay <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">Private Clinic</div>
     </a>
 
     <!-- Divider -->
@@ -56,13 +56,13 @@
     </li>
 
 
-    <li id="oderActive" class="nav-item">
+    <li id="orderActive" class="nav-item">
         <a class="nav-link" href="${pageContext.request.contextPath}/manager/checkup">
             <i class="fas fa-fw fa-table"></i>
             <span>Thanh toán</span></a>
     </li>
 
-    <li id="oderActive" class="nav-item">
+    <li id="orderActive" class="nav-item">
         <a class="nav-link" href="${pageContext.request.contextPath}/manager/shift">
             <i class="fas fa-fw fa-table"></i>
             <span>Kê toa</span></a>

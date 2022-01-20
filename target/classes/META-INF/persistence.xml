@@ -3,15 +3,15 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
              version="2.2">
-    <persistence-unit name="SalesDB">
+    <persistence-unit name="Clinic">
 
-        <class>com.clinic.customer.entity.Checkup</class>
-        <class>com.clinic.customer.entity.Employee</class>
-        <class>com.clinic.customer.entity.Medicine</class>
-        <class>com.clinic.customer.entity.CheckupDetail</class>
-        <class>com.clinic.customer.entity.Medicine_img</class>
-        <class>com.clinic.customer.entity.Medicine_type</class>
-        <class>com.clinic.customer.entity.Shift</class>
+        <class>com.congtam.customer.pojos.Checkup</class>
+        <class>com.congtam.customer.pojos.Employee</class>
+        <class>com.congtam.customer.pojos.Medicine</class>
+        <class>com.congtam.customer.pojos.CheckupDetail</class>
+        <class>com.congtam.customer.pojos.Medicine_img</class>
+        <class>com.congtam.customer.pojos.Medicine_type</class>
+        <class>com.congtam.customer.pojos.Shift</class>
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/clinic" />
             <property name="javax.persistence.jdbc.user" value="root" />
