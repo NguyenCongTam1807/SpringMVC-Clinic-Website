@@ -126,7 +126,7 @@
                                 </div>
                                 <s:select path="userType" class="custom-select">
                                     <option value="0">Admin</option>
-                                    <option value="1">Bác sỉ</option>
+                                    <option value="1">Bác sĩ</option>
                                     <option value="2">Y tá</option>
                                 </s:select>
                             </div>

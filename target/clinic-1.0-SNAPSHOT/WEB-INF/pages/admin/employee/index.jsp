@@ -116,7 +116,7 @@
                                                         Admin
                                                     </c:when>
                                                     <c:when test="${employee.userType == 1}">
-                                                        Bác sỉ
+                                                        Bác sĩ
                                                     </c:when>
 
                                                     <c:otherwise>
