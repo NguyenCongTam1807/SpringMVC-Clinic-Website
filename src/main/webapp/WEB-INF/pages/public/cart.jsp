@@ -79,7 +79,7 @@
 
       </div>
 
-        <c:if test="${not empty order}">
+        <c:if test="${not empty checkup}">
           <div class="col-lg-4 col-md-6">
             <div class="main-block">
               <div class="filter-title">
@@ -88,11 +88,11 @@
               <table class="table table-borderless mb-0">
                 <tr class="border-theme">
                   <td>Tổng tiền</td>
-                  <td class="float-right">${order.total} đ</td>
+                  <td class="float-right">${checkup.total} đ</td>
                 </tr>
                 </tbody>
               </table>
-              <div class="text-center"> <a class="btn black-button animated slideInRight" href="${pageContext.request.contextPath}/pay?id=${order.id}">Xử lý tóa thuốc <i class="fas fa-arrow-alt-circle-right"></i></a> </div>
+              <div class="text-center"> <a class="btn black-button animated slideInRight" href="${pageContext.request.contextPath}/pay?id=${checkup.id}">Xử lý toa thuốc <i class="fas fa-arrow-alt-circle-right"></i></a> </div>
             </div>
           </div>
         </c:if>

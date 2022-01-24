@@ -50,8 +50,7 @@
 
 <script>
     function myFunction() {
-        // document.getElementById("demo").innerHTML = "Hello World";
-        confirm("Bạn sẻ kê toa cho bệnh nhân này!!!");
+        confirm("Bạn sẽ kê toa cho bệnh nhân này!!!");
     }
 </script>
 

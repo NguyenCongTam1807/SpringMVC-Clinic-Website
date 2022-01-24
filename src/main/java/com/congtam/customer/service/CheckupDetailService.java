@@ -52,7 +52,7 @@ public class CheckupDetailService {
 
         Checkup checkup = checkupRepository.findCheckupByUserId(employee.getId());
 
-        CheckupDetail checkupDetail=null;
+        CheckupDetail checkupDetail;
         if (checkup != null && checkup.getStatus() == 0){
             checkupDetail = repo.findByMedicineAndCheckup(medicine,checkup);
             if (checkupDetail != null){
