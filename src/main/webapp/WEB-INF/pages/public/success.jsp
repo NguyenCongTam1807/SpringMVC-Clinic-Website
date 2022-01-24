@@ -24,12 +24,5 @@
     </div>
 </section>
 
-<script>
-    function myFunction() {
-        // document.getElementById("demo").innerHTML = "Hello World";
-        confirm("Bạn chắc chọn phòng này!!!");
-    }
-</script>
-
 <jsp:include page="./_footer.jsp"></jsp:include>
 <!--=====End Footer =====-->

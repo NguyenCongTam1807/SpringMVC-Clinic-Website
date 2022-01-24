@@ -21,8 +21,8 @@
 <!--===== End header =====-->
 <section class="page-section-ptb">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-8 text-center">
                 <div class="main-block">
                     <c:if test="${not empty msg}">
                         <div>
@@ -43,7 +43,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input type="password" name="oldpass" class="form-control" placeholder="Mật khẩu củ">
+                                        <input type="password" name="oldpass" class="form-control" placeholder="Mật khẩu cũ">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
@@ -57,7 +57,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="btn theme-button animated slideInRight" href="javascript:void(0)">Register </button>
+                            <button class="btn theme-button animated slideInRight" href="javascript:void(0)">Đổi mật khẩu</button>
                         </form>
                     </div>
                 </div>

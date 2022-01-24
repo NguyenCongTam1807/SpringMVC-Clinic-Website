@@ -47,6 +47,7 @@
                                 <th>Tên</th>
                                 <th>Email</th>
                                 <th>Số điện thoại</th>
+                                <th>Giờ</th>
                                 <th>Hủy lịch</th>
                             </tr>
                             </thead>

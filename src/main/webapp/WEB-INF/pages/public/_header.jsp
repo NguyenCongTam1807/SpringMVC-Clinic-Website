@@ -54,28 +54,34 @@
                             <!-- menu links -->
                             <div class="menu-bar">
                                 <ul class="menu-links">
-                                    <li><a href="${pageContext.request.contextPath}/trang-chu" data-hover="TRANG&nbsp;CHỦ">TRANG&nbsp;CHỦ<i class="fa fa-angle-down d-sm-none set-icon"></i></a> </li>
-                                    <c:if test="${employee.userType == 1}">
-                                        <li><a href="javascript:void(0)" data-hover="Loại&nbsp;thuốc">Loại&nbsp;thuốc<i class="fa fa-angle-down d-lg-none set-icon"></i></a>
-                                            <!-- drop down multilevel  -->
-                                            <ul class="drop-down-multilevel">
-                                                <c:forEach items="${listCategory}" var="category">
-                                                    <li><a href="${pageContext.request.contextPath}/danh-muc/${category.id}">${category.name}</a></li>
-                                                </c:forEach>
-                                            </ul>
-                                        </li>
-
-                                        <li><a href="${pageContext.request.contextPath}/benh-nhan" data-hover="Bệnh&nbsp;nhân">Bệnh&nbsp;nhân<i class="fa fa-angle-down d-lg-none set-icon"></i></a>
-                                            <!-- drop down multilevel  -->
-
-                                        </li>
-                                    </c:if>
-                                    <c:if test="${empty employee}">
-                                        <li><a href="${pageContext.request.contextPath}/dat-lich" data-hover="Đặt&nbsp;lịch">Đặt&nbsp;lịch<i class="fa fa-angle-down d-lg-none set-icon"></i></a>
-                                            <!-- drop down multilevel  -->
-
-                                        </li>
-                                    </c:if>
+                                    <li><a href="${pageContext.request.contextPath}/trang-chu" data-hover="TRANG&nbsp;CHỦ">Trang chủ<i class="fa fa-angle-down d-sm-none set-icon"></i></a> </li>
+                                    <c:choose>
+                                        <c:when test="${employee == null}">
+                                            <li><a href="${pageContext.request.contextPath}/dat-lich" data-hover="Đặt&nbsp;lịch">Đặt&nbsp;lịch<i class="fa fa-angle-down d-lg-none set-icon"></i></a></li>
+                                            <li><a href="${pageContext.request.contextPath}/huy-lich" data-hover="Hủy&nbsp;lịch">Hủy lịch</a></li>
+                                            <li><a href="${pageContext.request.contextPath}/dang-nhap" data-hover="Đăng&nbsp;nhập">Đăng nhập</a></li>
+                                            <li><a href="${pageContext.request.contextPath}/dang-ky" data-hover="Đăng&nbsp;ký">Đăng ký</a></li>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <c:if test="${employee.userType == 0}">
+                                                <li><a href="${pageContext.request.contextPath}/manager/medicinetype" data-hover="Quyền&nbsp;Admin">Quyền Admin</a></li>
+                                            </c:if>
+                                            <c:if test="${employee.userType == 1}">
+                                                <li>
+                                                    <a href="javascript:void(0)" data-hover="Loại&nbsp;thuốc">Loại&nbsp;thuốc<i class="fa fa-angle-down d-lg-none set-icon"></i></a>
+                                                    <!-- drop down multilevel  -->
+                                                    <ul class="drop-down-multilevel">
+                                                        <c:forEach items="${listCategory}" var="category">
+                                                            <li><a href="${pageContext.request.contextPath}/danh-muc/${category.id}">${category.name}</a></li>
+                                                        </c:forEach>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="${pageContext.request.contextPath}/benh-nhan" data-hover="Bệnh&nbsp;nhân">Bệnh&nbsp;nhân<i class="fa fa-angle-down d-lg-none set-icon"></i></a></li>
+                                            </c:if>
+                                            <li><a href="${pageContext.request.contextPath}/thong-tin" data-hover="Đổi&nbsp;mật&nbsp;khẩu">Đổi mật khẩu</a></li>
+                                            <li><a href="${pageContext.request.contextPath}/dang-xuat" data-hover="Đăng&nbsp;xuất">Đăng&nbsp;xuất</a></li>
+                                        </c:otherwise>
+                                    </c:choose>
                                 </ul>
 
                                 <!-- Shopping cart -->
@@ -130,29 +136,29 @@
                                     </div>
                                     </c:if>
 
-                                    <div class="more"> <a class="more-btn txt-white" href="javascript:void(0)"> <i class="fas fa-align-left"></i></a>
-                                        <div class="sub-more">
-                                            <ul class="my-account">
-                                                <c:choose>
-                                                    <c:when test="${employee == null}">
-                                                        <li><a href="${pageContext.request.contextPath}/huy-lich">Hủy lịch khám</a></li>
-                                                        <li><a href="${pageContext.request.contextPath}/dang-nhap">Đăng&nbsp;nhập</a></li>
-                                                        <li><a href="${pageContext.request.contextPath}/dang-ky">Đăng&nbsp;ký</a></li>
-                                                    </c:when>
-                                                    <c:otherwise>
-                                                        <c:if test="${employee.userType == 0}">
-                                                            <li><a href="${pageContext.request.contextPath}/manager/medicinetype">Quyền Admin</a></li>
-                                                        </c:if>
-<%--                                                        <c:if test="${employee.userType == 1}">--%>
-
+<%--                                    <div class="more"> <a class="more-btn txt-white" href="javascript:void(0)"> <i class="fas fa-align-left"></i></a>--%>
+<%--                                        <div class="sub-more">--%>
+<%--                                            <ul class="my-account">--%>
+<%--                                                <c:choose>--%>
+<%--                                                    <c:when test="${employee == null}">--%>
+<%--                                                        <li><a href="${pageContext.request.contextPath}/huy-lich">Hủy lịch khám</a></li>--%>
+<%--                                                        <li><a href="${pageContext.request.contextPath}/dang-nhap">Đăng&nbsp;nhập</a></li>--%>
+<%--                                                        <li><a href="${pageContext.request.contextPath}/dang-ky">Đăng&nbsp;ký</a></li>--%>
+<%--                                                    </c:when>--%>
+<%--                                                    <c:otherwise>--%>
+<%--                                                        <c:if test="${employee.userType == 0}">--%>
+<%--                                                            <li><a href="${pageContext.request.contextPath}/manager/medicinetype">Quyền Admin</a></li>--%>
 <%--                                                        </c:if>--%>
-                                                        <li><a href="${pageContext.request.contextPath}/thong-tin">Đổi mật khẩu</a></li>
-                                                        <li><a href="${pageContext.request.contextPath}/dang-xuat">Đăng&nbsp;xuất</a></li>
-                                                    </c:otherwise>
-                                                </c:choose>
-                                            </ul>
-                                        </div>
-                                    </div>
+<%--&lt;%&ndash;                                                        <c:if test="${employee.userType == 1}">&ndash;%&gt;--%>
+
+<%--&lt;%&ndash;                                                        </c:if>&ndash;%&gt;--%>
+<%--                                                        <li><a href="${pageContext.request.contextPath}/thong-tin">Đổi mật khẩu</a></li>--%>
+<%--                                                        <li><a href="${pageContext.request.contextPath}/dang-xuat">Đăng&nbsp;xuất</a></li>--%>
+<%--                                                    </c:otherwise>--%>
+<%--                                                </c:choose>--%>
+<%--                                            </ul>--%>
+<%--                                        </div>--%>
+<%--                                    </div>--%>
                                 </div>
                             </div>
                         </div>

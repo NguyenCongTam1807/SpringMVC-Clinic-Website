@@ -118,7 +118,6 @@
                                                     <c:when test="${employee.userType == 1}">
                                                         Bác sĩ
                                                     </c:when>
-
                                                     <c:otherwise>
                                                         Y tá
                                                     </c:otherwise>
@@ -126,12 +125,13 @@
                                             </td>
                                             <td>${employee.address}</td>
                                             <td>
-                                                <c:choose>
-                                                    <c:when test="${employee.userType == 0}"></c:when>
-                                                    <c:otherwise>
-                                                        <a class="btn btn-danger" href="${pageContext.request.contextPath}/manager/employee/delete?id=${employee.id}">Delete</a>
-                                                    </c:otherwise>
-                                                </c:choose>
+                                                <a class="btn btn-danger" href="${pageContext.request.contextPath}/manager/employee/delete?id=${employee.id}">Delete</a>
+<%--                                                <c:choose>--%>
+<%--                                                    <c:when test="${employee.userType == 0}"></c:when>--%>
+<%--                                                    <c:otherwise>--%>
+<%--                                                        <a class="btn btn-danger" href="${pageContext.request.contextPath}/manager/employee/delete?id=${employee.id}">Delete</a>--%>
+<%--                                                    </c:otherwise>--%>
+<%--                                                </c:choose>--%>
 
 
                                             </td>
@@ -153,7 +153,7 @@
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Your Website 2020</span>
+                    <span>Copyright &copy; Công Tâm CS92 - 2022</span>
                 </div>
             </div>
         </footer>

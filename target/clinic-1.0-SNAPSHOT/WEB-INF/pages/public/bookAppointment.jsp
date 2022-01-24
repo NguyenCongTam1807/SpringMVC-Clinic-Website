@@ -24,15 +24,15 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-4 text-center hvr-wobble-horizontal"> <img class="img-fluid service-img" src="<%=request.getContextPath()%>/template/public/images/address.png" alt="">
                                 <h4>Address</h4>
-                                <p>xyz, Đà Nẵng</p>
+                                <p>371 Nguyễn Kiệm, Phường 3, Quận Gò Vấp, TPHCM</p>
                             </div>
                             <div class="col-lg-4 col-md-4 text-center hvr-wobble-horizontal"> <img class="img-fluid service-img" src="<%=request.getContextPath()%>/template/public/images/phone.png" alt="">
                                 <h4>Phone</h4>
-                                <p>+(012) 456 789</p>
+                                <p>0123456789</p>
                             </div>
                             <div class="col-lg-4 col-md-4 text-center hvr-wobble-horizontal"> <img class="img-fluid service-img" src="<%=request.getContextPath()%>/template/public/images/mail.png" alt="">
                                 <h4>Email</h4>
-                                <p>info@demo.com</p>
+                                <p>1951012112tam@ou.edu.vn</p>
                             </div>
                         </div>
                     </div>

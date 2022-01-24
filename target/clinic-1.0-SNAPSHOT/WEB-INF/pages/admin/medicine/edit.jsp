@@ -34,6 +34,11 @@
     <!-- Custom styles for this page -->
     <link href="<%=request.getContextPath()%>/template/admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     <style>
+        .error{
+            padding-left: 5px;
+            font-size: 20px;
+            color: red;
+        }
         .gallery img{
             width: 300px;
         }
@@ -65,14 +70,14 @@
                     <div class="col-md-7 col-lg-8">
                     <h4 class="mb-3">Sửa thuốc</h4>
 
-                    <s:form method="POST"  modelAttribute="medicine" action="${pageContext.request.contextPath}/manager/medicine/edit" enctype="multipart/form-data">
+                    <s:form method="POST" id="edit-medicine" modelAttribute="medicine" action="${pageContext.request.contextPath}/manager/medicine/edit" enctype="multipart/form-data">
                         <!-- input text code -->
                         <s:hidden path="id" class="form-control" />
                         <!-- input text code-->
                         <div class="table-responsive">
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="">Tên thuốc</span>
+                                    <span class="input-group-text" id="" name="name">Tên thuốc</span>
                                 </div>
                                 <s:input path="name" class="form-control" />
                             </div>
@@ -80,7 +85,7 @@
                         <div class="table-responsive">
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="">Giá</span>
+                                    <span class="input-group-text" id="" name="price">Giá</span>
                                 </div>
                                 <s:input path="price" class="form-control" />
                             </div>
@@ -88,7 +93,7 @@
                         <div class="table-responsive">
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="">Mô tả</span>
+                                    <span class="input-group-text" id="" name="description">Mô tả</span>
                                 </div>
                                 <s:textarea path="description" class="form-control"/>
                             </div>
@@ -116,7 +121,7 @@
                                 </s:select>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Sửa</button>
+                        <button type="submit" class="btn btn-primary" onclick="addMedicine()">Sửa</button>
                     </s:form>
                 </div>
                     <div class="col-5 col-md-5 col-lg-4">
@@ -140,7 +145,7 @@
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Your Website 2020</span>
+                    <span>Copyright &copy; Công Tâm CS92 - 2022</span>
                 </div>
             </div>
         </footer>
@@ -180,7 +185,7 @@
 <!-- Bootstrap core JavaScript-->
 <script src="<%=request.getContextPath()%>/template/admin/vendor/jquery/jquery.min.js"></script>
 <script src="<%=request.getContextPath()%>/template/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
 <!-- Core plugin JavaScript-->
 <script src="<%=request.getContextPath()%>/template/admin/vendor/jquery-easing/jquery.easing.min.js"></script>
 
@@ -220,6 +225,45 @@
             imagesPreview(this, 'div.gallery');
         });
     });
+</script>
+<script type="text/javascript">
+
+    function addMedicine()
+    {
+        $("#edit-medicine").validate({
+            rules:
+                {
+                    "name": {
+                        required: true,
+                        normalizer: function(value) {
+                            return $.trim(value);
+                        }
+                    },
+                    "price":{
+                        required:true,
+                        number: true,
+                    },
+                    "description":{
+                        required:true,
+                        maxlength: 255,
+                    },
+                },
+            messages:
+                {
+                    "name": {
+                        required: "Vui lòng nhập tên thuốc"
+                    },
+                    "price":{
+                        required: "Vui lòng nhập giá tiền",
+                        number: "Nhập sai định dạng"
+                    },
+                    "description":{
+                        required:"Vui lòng nhập mô tả",
+                        maxlength: "Tối đa 255 kí tự",
+                    },
+                }
+        });
+    }
 </script>
 </body>
 

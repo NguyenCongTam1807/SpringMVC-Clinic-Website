@@ -51,7 +51,7 @@
         <div class="footer-copyright">
             <div class="row pt-30 pb-30">
                 <div class="col-lg-6 col-md-8">
-                    <p> ©Copyright 2019 <a href="index.jsp"> e-shoppers </a> All Rights Reserved </p>
+                    <p> ©Copyright 2022 <a href="index.jsp"> Công Tâm CS92 </a> All Rights Reserved </p>
                 </div>
                 <div class="col-lg-6 col-md-4"> <a href="javascript:void(0)"><img class="img-fluid float-right xs-left" src="<%=request.getContextPath()%>/template/public/images/payment.png" alt=""></a> </div>
             </div>

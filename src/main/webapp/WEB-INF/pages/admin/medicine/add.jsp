@@ -147,7 +147,7 @@
         <footer class="sticky-footer bg-white">
             <div class="container my-auto">
                 <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Your Website 2020</span>
+                    <span>Copyright &copy; Công Tâm CS92 - 2022</span>
                 </div>
             </div>
         </footer>
@@ -237,8 +237,7 @@
             $("#add-medicine").validate({
                 rules:
                     {
-                        "name":
-                            {
+                        "name": {
                                 required: true,
                                 normalizer: function(value) {
                                     return $.trim(value);
