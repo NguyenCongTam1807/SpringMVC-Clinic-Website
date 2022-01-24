@@ -43,20 +43,19 @@ public class LoginController {
             return "redirect:/dang-ky?error=true";
         }
 
-        Employee employee = new Employee();
+        Employee employee;
         employee = employeeService.login(email, StringUtil.md5(password));
         session.setAttribute("employee", employee);
 
         if (employee == null) {
             return "redirect:/dang-nhap?error=true";
         }
-
-        if (employee.getUserType() == 0) {
+        else
             return "redirect:/trang-chu";
-        } else if (employee.getUserType() == 1) {
-            return "redirect:/trang-chu";
-        }
-        return "redirect:/dang-nhap?error=true";
+//        if (employee.getUserType() == 0 || employee.getUserType() == 1) {
+//            return "redirect:/trang-chu";
+//        }
+//        return "redirect:/dang-nhap?error=true";
     }
 
 

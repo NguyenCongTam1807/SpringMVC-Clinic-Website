@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 @Transactional
-public class Medicine_TypeService {
+public class Medicine_TypeService{
     @Autowired private MedicineTypeRepository repo; //DI
     public void save(Medicine_type medicine_type) {
         repo.save(medicine_type);
@@ -27,5 +27,7 @@ public class Medicine_TypeService {
     public void delete(Long id) {
         repo.deleteById(id);
     }
+
+    public List<Object[]> medsByCateStats(){return repo.medsByCateStats();};
 
 }

@@ -13,7 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
-@Controller(value = "roomControllerOfAdmin")
+@Controller(value = "adminShiftController")
 public class ShiftController {
     @Autowired
     private ShiftService shiftService;
@@ -21,7 +21,6 @@ public class ShiftController {
     @RequestMapping("/manager/shift")
     public String home(HttpSession session, Model model) {
         Employee employee = (Employee) session.getAttribute("employee");
-        ModelAndView mav = null;
         if (employee!=null && employee.getUserType()==0){
             List<Shift> listShift = shiftService.listAll();
             model.addAttribute("listShift", listShift);

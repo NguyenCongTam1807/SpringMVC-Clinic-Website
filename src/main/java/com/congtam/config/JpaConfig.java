@@ -15,7 +15,7 @@ import java.util.Properties;
 //spring data + hibernate
 //orm
 @Configuration
-@EnableJpaRepositories(basePackages = {"com.congtam.customer"})
+@EnableJpaRepositories(basePackages = {"com.congtam"})
 @EnableTransactionManagement
 public class JpaConfig {
     @Bean

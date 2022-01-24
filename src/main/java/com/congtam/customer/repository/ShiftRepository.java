@@ -21,7 +21,7 @@ public interface ShiftRepository extends CrudRepository<Shift, Long> {
     @Query(value = "INSERT INTO Shift (active, name, email,note,phone) VALUES (0,?1,?2,?3,?4)", nativeQuery = true)
     void insertShift(String name, String email,String note,String phone);
 
-    //@Query(value = "SELECT * FROM Shift where name = ?1 and active = 0",nativeQuery = true)
     @Query("SELECT s FROM Shift s where s.name LIKE CONCAT('%',:search,'%') and s.active = 0")
     List<Shift> search(@Param("search") String search);
+
 }

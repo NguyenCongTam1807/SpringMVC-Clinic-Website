@@ -64,7 +64,7 @@
                                         </c:when>
                                         <c:otherwise>
                                             <c:if test="${employee.userType == 0}">
-                                                <li><a href="${pageContext.request.contextPath}/manager/medicinetype" data-hover="Quyền&nbsp;Admin">Quyền Admin</a></li>
+                                                <li><a href="${pageContext.request.contextPath}/manager/medicinetype" data-hover="Quản&nbsp;Lý">Quản Lý</a></li>
                                             </c:if>
                                             <c:if test="${employee.userType == 1}">
                                                 <li>

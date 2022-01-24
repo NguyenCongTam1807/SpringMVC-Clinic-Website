@@ -178,7 +178,7 @@
 </div>
 
 <script>
-    document.getElementById("orderActive").classList.add('active');
+    document.getElementById("checkupActive").classList.add('active');
 </script>
 
 <!-- Bootstrap core JavaScript-->

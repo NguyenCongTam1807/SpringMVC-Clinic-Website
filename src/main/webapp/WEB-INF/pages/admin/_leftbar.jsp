@@ -35,7 +35,6 @@
     </div>
 
 
-
     <li id="categoryActive" class="nav-item">
         <a class="nav-link" href="${pageContext.request.contextPath}/manager/medicinetype">
             <i class="fas fa-fw fa-cog"></i>
@@ -56,16 +55,22 @@
     </li>
 
 
-    <li id="orderActive" class="nav-item">
+    <li id="checkupActive" class="nav-item">
         <a class="nav-link" href="${pageContext.request.contextPath}/manager/checkup">
             <i class="fas fa-fw fa-table"></i>
             <span>Thanh toán</span></a>
     </li>
 
-    <li id="orderActive" class="nav-item">
+    <li id="shiftActive" class="nav-item">
         <a class="nav-link" href="${pageContext.request.contextPath}/manager/shift">
             <i class="fas fa-fw fa-table"></i>
             <span>Kê toa</span></a>
+    </li>
+
+    <li id="statsActive" class="nav-item">
+        <a class="nav-link" href="${pageContext.request.contextPath}/manager/stats">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Thống kê</span></a>
     </li>
 
     <!-- Divider -->
