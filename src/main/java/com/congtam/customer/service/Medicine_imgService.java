@@ -17,7 +17,7 @@ public class Medicine_imgService {
     }
 
     public List<Medicine_img> getAllByProductId(long id) {
-        return (List<Medicine_img>) repo.getAllByProductId(id);
+        return repo.getAllByProductId(id);
     }
 
     public void deleteProduct_imgByProductId(Long id) {

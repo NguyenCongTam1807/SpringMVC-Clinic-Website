@@ -31,7 +31,7 @@
                 </select>
               </div>
               <div class="col-lg-3 col-5">
-                <button class="btn theme-button pt-2 pb-2" type="submit">Xắp sếp</button>
+                <button class="btn theme-button pt-2 pb-2" type="submit">Sắp xếp</button>
               </div>
             </div>
           </form>

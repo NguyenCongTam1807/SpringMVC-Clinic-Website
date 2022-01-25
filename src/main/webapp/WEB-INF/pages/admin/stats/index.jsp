@@ -74,7 +74,19 @@
                     </c:forEach>
                 </table>
             </div>
-
+            <hr style="height:10px;color:black;background-color:black">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h3>Thống Kê Doanh Thu Theo Tháng Trong Năm</h3>
+                    <br>
+                    <form action="" class="form-inline justify-content-center">
+                            <input type="text" placeholder="Nhập năm cần thống kê" name="year" class="form-control col-3" />
+                            <input type="submit" value="Hiển thị" class="btn btn-success" />
+                    </form>
+                    <br>
+                    <canvas id="myRevenueStatsChart" ></canvas>
+                </div>
+            </div>
 
         <!-- End of Main Content -->
 
@@ -125,18 +137,17 @@
     <script>
         let cateLabels=[], cateInfo=[];
         <c:forEach items="${medsByCate}" var="c">
-            cateLabels.push('${c[1]}')
-            cateInfo.push(${c[2]})
+        cateLabels.push('${c[1]}')
+        cateInfo.push(${c[2]})
         </c:forEach>
         drawCateChart("myCateStatsChart",cateLabels,cateInfo)
 
+        let revenueInfo = [];
+        <c:forEach items="${revenueByMonth}" var="c">
+            revenueInfo.push(${c})
+        </c:forEach>
+        drawRevenueChart("myRevenueStatsChart",revenueInfo)
 
-    </script>
-    <script>
-        // const myChart = new Chart(
-        //     document.getElementById('myCateStatsChart'),
-        //     config
-        // );
     </script>
 
 <!-- Bootstrap core JavaScript-->

@@ -14,10 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -28,6 +25,7 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.io.File;
 import java.io.IOException;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -41,7 +39,6 @@ public class MedicineController {
     @RequestMapping("/manager/medicine")
     public String home(HttpSession session,Model model) {
         Employee employee = (Employee) session.getAttribute("employee");
-        ModelAndView mav = null;
         if (employee!=null && employee.getUserType()==0){
             List<Medicine> listMedicine = medicineService.listAll();
             model.addAttribute("listMedicine", listMedicine);
@@ -52,7 +49,7 @@ public class MedicineController {
     }
 
     @RequestMapping(value = "/manager/medicine/new", method = RequestMethod.GET)
-    public String newArticleForm(Map<String, Object> model, HttpServletRequest request) {
+    public String getMedicineTypes(Map<String, Object> model) {
         Medicine medicine = new Medicine();
         List<Medicine_type> listMedicineType = medicine_typeService.listAll();
         model.put("medicine", medicine);
@@ -61,7 +58,7 @@ public class MedicineController {
     }
 
     @RequestMapping(value = "/manager/medicine/new", method = RequestMethod.POST)
-    public String saveArticle (HttpSession session
+    public String saveMedicine(HttpSession session
             , @Valid @ModelAttribute("medicine") Medicine medicine, BindingResult rs, @RequestParam("file") List<MultipartFile> multipartFileList
             , HttpServletRequest request, RedirectAttributes re) {
         if(rs.hasErrors()) {
@@ -100,7 +97,7 @@ public class MedicineController {
 
 
     @RequestMapping(value = "/manager/medicine/edit", method = RequestMethod.POST)
-    public String editArticle (HttpSession session
+    public String editMedicineImg(HttpSession session
             , @ModelAttribute("medicine") Medicine medicine, @RequestParam("file") List<MultipartFile> multipartFileList
             , HttpServletRequest request, RedirectAttributes re) {
         Employee employee = (Employee) session.getAttribute("employee");
@@ -141,8 +138,8 @@ public class MedicineController {
 
 
     @RequestMapping("/manager/medicine/edit")
-    public ModelAndView editArticleForm(@RequestParam long id,RedirectAttributes re,HttpSession session) {
-        ModelAndView mav = null;
+    public ModelAndView editMedicineForm(@RequestParam long id, HttpSession session) {
+        ModelAndView mav;
         Employee employee = (Employee) session.getAttribute("employee");
         if(employee != null) {
             mav = new ModelAndView("admin/medicine/edit");
@@ -185,14 +182,11 @@ public class MedicineController {
 
     public File pathFile(String fileName,String folder,HttpServletRequest request){
         String rootPath = request.getServletContext().getRealPath(""); // trả về đường dẫn tuyệt đối của web(target)
-        System.out.println("rootPath:"+rootPath);
-        System.out.println("folder:"+folder);
-        File disry = new File(rootPath+folder); // đường dẫn folder
-        if (!disry.exists()){
-            disry.mkdirs();
+        File dir = new File(rootPath+folder); // đường dẫn folder
+        if (!dir.exists()){
+            dir.mkdirs();
         }
         File file = new File(rootPath+folder+"/"+fileName);
-        System.out.println("filePath:"+rootPath+folder+"/"+fileName);
         return file;
     }
 }

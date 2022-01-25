@@ -19,6 +19,10 @@ public class CheckupService {
 
     @Autowired private ShiftService shiftService;
 
+    public Float revenueByMonth(int year, int month){
+        return repo.revenueByMonth(year, month);
+    }
+
     public void save(Checkup checkup) {
         repo.save(checkup);
     }

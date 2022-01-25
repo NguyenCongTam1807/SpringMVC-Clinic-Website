@@ -9,6 +9,7 @@
          pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="s" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,7 +78,7 @@
                             <div class="table-responsive">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text" id="" name="name">Tên thuốc</span>
+                                        <span class="input-group-text" name="name">Tên thuốc</span>
                                     </div>
                                     <s:input path="name" class="form-control" />
                                 </div>
@@ -241,7 +242,7 @@
                                 required: true,
                                 normalizer: function(value) {
                                     return $.trim(value);
-                                }
+                                },
                             },
                         "price":{
                             required:true,
@@ -255,7 +256,7 @@
                 messages:
                     {
                         "name": {
-                                required: "Vui lòng nhập tên thuốc"
+                                required: "Vui lòng nhập tên thuốc",
                             },
                         "price":{
                             required: "Vui lòng nhập giá tiền",

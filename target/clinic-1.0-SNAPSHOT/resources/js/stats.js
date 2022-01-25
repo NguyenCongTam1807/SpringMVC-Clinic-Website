@@ -47,6 +47,31 @@ function drawCateChart(id, cateLabels=[], cateInfo=[]) {
     new Chart(ctx, config)
 }
 
+function drawRevenueChart(id, revenueInfo) {
+    const data = {
+        labels: [
+            'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+            'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+        ],
+        datasets: [{
+            label: 'Doanh thu theo từng tháng',
+            data: revenueInfo,
+            backgroundColor: generateColor(),
+        }]
+    };
+
+    const config = {
+        type: 'bar',
+        data: data,
+        options: {
+        }
+    };
+
+    let ctx = document.getElementById(id).getContext("2d")
+
+    new Chart(ctx, config)
+}
+
 function productChart(id, productLabels=[], productInfo=[]) {
     let colors = []
     for (let i = 0; i < productInfo.length; i++)

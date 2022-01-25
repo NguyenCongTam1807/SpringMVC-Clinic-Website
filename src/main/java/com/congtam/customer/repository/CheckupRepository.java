@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
+import java.util.Date;
+
 public interface CheckupRepository extends CrudRepository<Checkup,Long> {
     @Query(value = "select * from Checkup where employeeId = ?1 and status = 0", nativeQuery = true)
     Checkup findCheckupByUserId(long id);
@@ -24,4 +26,7 @@ public interface CheckupRepository extends CrudRepository<Checkup,Long> {
     @Query(value = "update Checkup set status = 2 where id = ?1 and status = 1", nativeQuery = true)
     void handle(long id);
 
+    @Query(value = "SELECT SUM(total) FROM checkup " +
+            "WHERE status=2 AND YEAR(checkupDate) = ?1 AND MONTH(checkupDate) = ?2", nativeQuery = true)
+    public Float revenueByMonth(int year, int month);
 }

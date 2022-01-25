@@ -62,7 +62,7 @@ public class MedicineController {
     public ModelAndView categorysort(@PathVariable(name = "id",required = false) Long id,
                                      @RequestParam(value = "sort",required = false)String sort){
         if (id == null){
-            id = 1l;
+            id = 1L;
         }
         if (sort==null){
             sort="az";
