@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Thống kê</title>
 
     <!-- Custom fonts for this template -->
@@ -32,7 +32,7 @@
 
     <!-- Custom styles for this page -->
     <link href="<%=request.getContextPath()%>/template/admin/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-
+    <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/stats.js"></script>
 </head>
 
 <body id="page-top">
@@ -55,38 +55,27 @@
             <!-- End of Topbar -->
 
             <!-- Begin Page Content -->
-            <div>
-                <canvas id="myCateStatsChart"></canvas>
+            <div class="row justify-content-md-around">
+                <div class="col-md-3 text-center">
+                    <canvas id="myCateStatsChart" ></canvas>
+                </div>
+                <table class="table col-md-8 text-center">
+                    <tr>
+                        <th>Mã loại thuốc</th>
+                        <th>Tên loại thuốc</th>
+                        <th>Số lượng thuốc</th>
+                    </tr>
+                    <c:forEach items="${medsByCate}" var="c">
+                        <tr>
+                            <td>${c[0]}</td>
+                            <td>${c[1]}</td>
+                            <td>${c[2]}</td>
+                        </tr>
+                    </c:forEach>
+                </table>
             </div>
 
-            <table class="table">
-                <tr>
-                    <th>Mã danh mục</th>
-                    <th>Tên danh mục</th>
-                    <th>Số lượng sản phẩm</th>
-                </tr>
-                <c:forEach items="${medsByCate}" var="c">
-                    <tr>
-                        <td>${c[0]}</td>
-                        <td>${c[1]}</td>
-                        <td>${c[2]}</td>
-                    </tr>
-                </c:forEach>
-            </table>
 
-            <script>
-                let cateLabels=[], cateInfo=[];
-
-                <c:forEach items="${medsByCate}" var="c">
-                cateLabels.push('${c[1]}')
-                cateInfo.push(${c[2]})
-                </c:forEach>
-
-
-                window.onload = function() {
-                    cateChart("myCateStatsChart", cateLabels, cateInfo)
-                }
-            </script>
         <!-- End of Main Content -->
 
         <!-- Footer -->
@@ -133,6 +122,22 @@
 <script>
     document.getElementById("statsActive").classList.add('active');
 </script>
+    <script>
+        let cateLabels=[], cateInfo=[];
+        <c:forEach items="${medsByCate}" var="c">
+            cateLabels.push('${c[1]}')
+            cateInfo.push(${c[2]})
+        </c:forEach>
+        drawCateChart("myCateStatsChart",cateLabels,cateInfo)
+
+
+    </script>
+    <script>
+        // const myChart = new Chart(
+        //     document.getElementById('myCateStatsChart'),
+        //     config
+        // );
+    </script>
 
 <!-- Bootstrap core JavaScript-->
 <script src="<%=request.getContextPath()%>/template/admin/vendor/jquery/jquery.min.js"></script>
@@ -150,7 +155,6 @@
 
 <!-- Page level custom scripts -->
 <script src="<%=request.getContextPath()%>/template/admin/js/demo/datatables-demo.js"></script>
-
 </body>
 
 </html>
