@@ -102,10 +102,10 @@
                                             <td>
                                                 <c:choose>
                                                     <c:when test="${shift.active == 1}">
-                                                        <input class="text-danger" type="button" value="Chờ nhận thuốc" disabled>
+                                                        <input class="text-danger" type="button" value="Đang chờ nhận thuốc" disabled>
                                                     </c:when>
                                                     <c:when test="${shift.active == 0}">
-                                                        <input type="button" value="Đang xử lý" disabled>
+                                                        <input type="button" value="Đang chờ bác sĩ xác nhận" disabled>
                                                     </c:when>
                                                     <c:otherwise>
 

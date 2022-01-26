@@ -101,26 +101,25 @@
                                 </tr>
                                 </tfoot>
                                 <tbody>
-                                    <c:forEach items="${listCheckup}" var="chekcup">
+                                    <c:forEach items="${listCheckup}" var="checkup">
                                     <tr>
-                                            <td>${chekcup.id}</td>
-                                            <td>${chekcup.checkupDate}</td>
-                                            <td>${chekcup.status}</td>
-                                            <td>${chekcup.total} đ</td>
-                                            <td>${chekcup.employee.userName}</td>
+                                            <td>${checkup.id}</td>
+                                            <td>${checkup.checkupDate}</td>
+                                            <td>${checkup.status}</td>
+                                            <td>${checkup.total} đ</td>
+                                            <td>${checkup.employee.userName}</td>
                                             <td>
                                                 <c:choose>
-                                                    <c:when test="${chekcup.status == 1}">
-                                                        <a class="btn btn-success" href="${pageContext.request.contextPath}/manager/checkup/handle?id=${chekcup.id}&idshift=${chekcup.shift.id}">Thanh toán</a>
+                                                    <c:when test="${checkup.status == 1}">
+                                                        <a class="btn btn-success" href="${pageContext.request.contextPath}/manager/checkup/handle?id=${checkup.id}&idshift=${checkup.shift.id}">Thanh toán</a>
                                                     </c:when>
-                                                    <c:when test="${chekcup.status == 0}">
-                                                        <a class="btn btn-warning" href="${pageContext.request.contextPath}/manager/checkup/handle?id=${chekcup.id}&idshift=${chekcup.shift.id}">Thanh toán</a>
+                                                    <c:when test="${checkup.status == 0}">
+                                                        <a class="btn btn-warning" href="${pageContext.request.contextPath}/manager/checkup/handle?id=${checkup.id}&idshift=${checkup.shift.id}">Đang chờ bác sĩ xác nhận</a>
                                                     </c:when>
                                                     <c:otherwise>
 
                                                     </c:otherwise>
                                                 </c:choose>
-
                                             </td>
                                     </tr>
                                     </c:forEach>

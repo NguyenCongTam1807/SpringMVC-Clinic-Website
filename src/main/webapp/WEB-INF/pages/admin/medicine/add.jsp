@@ -112,8 +112,8 @@
                                 </div>
                                 <div class="custom-file">
                                     <!-- id="inputGroupFile01 -->
-                                    <input type="file" id="gallery-photo-add" name="file" multiple="multiple" class="custom-file-input"/>
-                                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                    <input type="file" id="gallery-photo-add" name="file" multiple="multiple" class="custom-file-input" accept=".jpg, .jpeg, .png"/>
+                                    <label class="custom-file-label" id="inputGroupFile01">Choose file</label>
                                 </div>
                             </div>
 
@@ -215,6 +215,7 @@
 
                     reader.onload = function(event) {
                         $($.parseHTML('<img>')).attr('src', event.target.result).appendTo(placeToInsertImagePreview);
+                        $($.parseHTML('<span>')).text("Preview Image").appendTo(placeToInsertImagePreview);
                     }
 
                     reader.readAsDataURL(input.files[i]);

@@ -9,5 +9,5 @@ public class MessageConstant {
     public static final String DELETE_ERROR = "Xóa thất bại";
     public static final String PAY_SUSSCESS = "Thanh toán thành công";
     public static final String HANDLE = "Khách đã nhận thuốc";
-    public static final String HANDLE_ERR = "Bác sĩ chưa xác nhận toa!!!";
+    public static final String HANDLE_ERR = "Bác sĩ chưa nhận toa!!!";
 }

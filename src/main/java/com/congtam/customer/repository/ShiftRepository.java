@@ -14,7 +14,7 @@ public interface ShiftRepository extends CrudRepository<Shift, Long> {
     void bookRoom(long id);
 
     @Modifying
-    @Query(value = "update Shift set active = 3 where id = ?1", nativeQuery = true)
+    @Query(value = "update Shift set active = 2 where id = ?1", nativeQuery = true)
     void handle(long id);
 
     @Modifying

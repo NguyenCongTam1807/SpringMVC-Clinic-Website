@@ -126,7 +126,6 @@ public class MedicineController {
                     }
                 }
                 re.addFlashAttribute("msg", MessageConstant.EDIT_SUSSCESS);
-
             } catch (Exception e) {
                 System.out.println("lỗi:====================");
             }
