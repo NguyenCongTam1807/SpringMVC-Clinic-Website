@@ -84,7 +84,7 @@
                                 <tr>
                                     <th>Id</th>
                                     <th>Ngày Đặt đơn</th>
-                                    <th>Trạng thái</th>
+                                    <th>Bệnh nhân</th>
                                     <th>Tổng tiền</th>
                                     <th>Người kê toa</th>
                                     <th>Xử lý</th>
@@ -94,7 +94,7 @@
                                 <tr>
                                     <th>Id</th>
                                     <th>Ngày Đặt đơn</th>
-                                    <th>Trạng thái</th>
+                                    <th>Bệnh nhân</th>
                                     <th>Tổng tiền</th>
                                     <th>Người kê toa</th>
                                     <th>Xử lý</th>
@@ -105,7 +105,7 @@
                                     <tr>
                                             <td>${checkup.id}</td>
                                             <td>${checkup.checkupDate}</td>
-                                            <td>${checkup.status}</td>
+                                            <td>${checkup.shift.name}</td>
                                             <td>${checkup.total} đ</td>
                                             <td>${checkup.employee.userName}</td>
                                             <td>
@@ -114,7 +114,7 @@
                                                         <a class="btn btn-success" href="${pageContext.request.contextPath}/manager/checkup/handle?id=${checkup.id}&idshift=${checkup.shift.id}">Thanh toán</a>
                                                     </c:when>
                                                     <c:when test="${checkup.status == 0}">
-                                                        <a class="btn btn-warning" href="${pageContext.request.contextPath}/manager/checkup/handle?id=${checkup.id}&idshift=${checkup.shift.id}">Đang chờ bác sĩ xác nhận</a>
+                                                        <a class="btn btn-warning" href="${pageContext.request.contextPath}/manager/checkup/handle?id=${checkup.id}&idshift=${checkup.shift.id}">Đang chờ bác sĩ kê toa</a>
                                                     </c:when>
                                                     <c:otherwise>
 

@@ -1,5 +1,7 @@
 package com.congtam.customer.controller.customer;
 
+import com.congtam.customer.pojos.AppointmentTime;
+import com.congtam.customer.service.AppointmentTimeService;
 import com.congtam.customer.service.ShiftService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,6 +15,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class C_Calendar {
 
     @Autowired private ShiftService shiftService;
+    @Autowired private AppointmentTimeService appointmentTimeService;
 
     @RequestMapping(value = "/huy-lich")
     public String search(){
@@ -31,8 +34,8 @@ public class C_Calendar {
         return "redirect:/huy-lich";
     }
 
-    @RequestMapping(value = "/abc")
-    public String seasrch(){
-        return "public/table";
-    }
+//    @RequestMapping(value = "/abc")
+//    public String seasrch(){
+//        return "public/table";
+//    }
 }

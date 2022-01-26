@@ -10,7 +10,7 @@ import java.util.List;
 
 @Service
 @Transactional
-public class AppoimentTimeService  {
+public class AppointmentTimeService {
     @Autowired private AppointmentTimeRepository appointmentTimeRepository;
     public void save(AppointmentTime appointmentTime) {
         appointmentTimeRepository.save(appointmentTime);

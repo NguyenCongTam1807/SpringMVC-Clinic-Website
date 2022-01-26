@@ -25,7 +25,7 @@ public class ShiftController {
     @Autowired private Medicine_TypeService categoryService;
     @Autowired private CheckupService checkupService;
     @Autowired private CheckupDetailService checkupDetailService;
-    @Autowired private ShiftService roomService;
+    @Autowired private ShiftService shiftService;
 
     @ModelAttribute
     public void modelAtr(Model model, HttpSession session){
@@ -48,7 +48,7 @@ public class ShiftController {
     @GetMapping("/benh-nhan")
     public ModelAndView home(HttpSession session){
         ModelAndView mav = new ModelAndView("public/bookShift");
-        mav.addObject("listRoom",roomService.listAll());
+        mav.addObject("listShift", shiftService.listAll());
         mav.addObject("listProduct",productService.listAll());
         return mav;
     }
@@ -57,14 +57,14 @@ public class ShiftController {
     public String phong(@RequestParam(value = "id") long id, HttpSession session,
                         RedirectAttributes re){
         Employee employee = (Employee) session.getAttribute("employee");
-        Checkup checkup = new Checkup();
+        Checkup checkup;
         if (employee != null){
             checkup = checkupService.findCheckupByUserId(employee.getId());
             if (checkup != null){
-                re.addFlashAttribute("roomActive","Chưa kê xong toa trong đơn");
+                re.addFlashAttribute("patientActive","Chưa kê xong toa trong đơn");
                 return "redirect:/benh-nhan";
             }
-            roomService.bookRoom(id);
+            shiftService.bookRoom(id);
             checkupService.saveRoom(employee,id);
             return "redirect:/danh-muc";
         }else {

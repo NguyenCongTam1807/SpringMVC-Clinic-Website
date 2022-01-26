@@ -64,7 +64,7 @@
     <li id="shiftActive" class="nav-item">
         <a class="nav-link" href="${pageContext.request.contextPath}/manager/shift">
             <i class="fas fa-fw fa-table"></i>
-            <span>Kê toa</span></a>
+            <span>Lượt khám</span></a>
     </li>
 
     <li id="statsActive" class="nav-item">

@@ -90,13 +90,13 @@
                                     <c:if test="${employee.userType == 1}">
                                         <div class="search"> <a class="search-btn" href="#search"></a> </div>
                                         <c:choose>
-                                        <c:when test="${not empty listCart}">
-                                        <div class="shpping-cart"> <a class="cart-btn txt-white" href="${pageContext.request.contextPath}/gio-hang">Kê toa<strong class="item">${listCart.size()}</strong></a>
+                                            <c:when test="${not empty listCart}">
+                                                <div class="shpping-cart"> <a class="cart-btn txt-white" href="${pageContext.request.contextPath}/gio-hang">Kê toa<strong class="item">${listCart.size()}</strong></a>
                                             </c:when>
-                                                <c:otherwise>
-                                                    <div class="shpping-cart"> <a class="cart-btn txt-white" href="${pageContext.request.contextPath}/gio-hang">Kê toa<strong class="item">0</strong></a>
-                                                </c:otherwise>
-                                            </c:choose>
+                                            <c:otherwise>
+                                                <div class="shpping-cart"> <a class="cart-btn txt-white" href="${pageContext.request.contextPath}/gio-hang">Kê toa<strong class="item">0</strong></a>
+                                            </c:otherwise>
+                                        </c:choose>
                                         <div class="cart">
                                             <c:choose>
                                                 <c:when test="${not empty listCart}">

@@ -47,7 +47,6 @@
                                 <th>Tên</th>
                                 <th>Email</th>
                                 <th>Số điện thoại</th>
-                                <th>Giờ</th>
                                 <th>Hủy lịch</th>
                             </tr>
                             </thead>
@@ -93,7 +92,7 @@
                             </tr>
                             </tbody>
                         </table>
-                        <div class="text-center"> <a class="btn black-button animated slideInRight" href="${pageContext.request.contextPath}/pay?id=${order.id}">Xử lý tóa thuốc <i class="fas fa-arrow-alt-circle-right"></i></a> </div>
+                        <div class="text-center"> <a class="btn black-button animated slideInRight" href="${pageContext.request.contextPath}/pay?id=${order.id}">Xử lý toa thuốc <i class="fas fa-arrow-alt-circle-right"></i></a> </div>
                     </div>
                 </div>
             </c:if>

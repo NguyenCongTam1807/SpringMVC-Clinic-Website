@@ -48,7 +48,7 @@ public class MedicineTypeController {
     public String saveAccount(@ModelAttribute("medicinetype") Medicine_type medicinetype,
                               HttpServletResponse response, RedirectAttributes re) {
         response.setCharacterEncoding("utf-8");
-        re.addFlashAttribute("msg", MessageConstant.ADD_SUSSCESS);
+        re.addFlashAttribute("msg", MessageConstant.ADD_SUCCESS);
                 medicine_typeService.save(medicinetype);
         return "redirect:/manager/medicinetype";
     }
@@ -56,7 +56,7 @@ public class MedicineTypeController {
     @RequestMapping(value = "/manager/medicinetype/edit", method = RequestMethod.POST)
     public String editAccount(@ModelAttribute("medicinetype") Medicine_type medicinetype, HttpServletResponse response, RedirectAttributes re) {
         response.setCharacterEncoding("utf-8");
-        re.addFlashAttribute("msg", MessageConstant.EDIT_SUSSCESS);
+        re.addFlashAttribute("msg", MessageConstant.EDIT_SUCCESS);
         medicine_typeService.save(medicinetype);
         return "redirect:/manager/medicinetype";
     }
@@ -73,7 +73,7 @@ public class MedicineTypeController {
     public String deleteAccountForm(@RequestParam long id, RedirectAttributes re) {
         try {
             medicine_typeService.delete(id);
-            re.addFlashAttribute("msg", MessageConstant.DELETE_SUSSCESS);
+            re.addFlashAttribute("msg", MessageConstant.DELETE_SUCCESS);
             return "redirect:/manager/medicinetype";
         }catch (Exception e){
             re.addFlashAttribute("msg_err", MessageConstant.DELETE_ERROR);

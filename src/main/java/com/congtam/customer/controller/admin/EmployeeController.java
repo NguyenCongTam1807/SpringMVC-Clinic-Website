@@ -56,7 +56,7 @@ public class EmployeeController {
         employee.setPassword(StringUtil.md5(pass));
         response.setCharacterEncoding("utf-8");
         employeeService.save(employee);
-        rss.addFlashAttribute("msg", MessageConstant.ADD_SUSSCESS);
+        rss.addFlashAttribute("msg", MessageConstant.ADD_SUCCESS);
         return "redirect:/manager/employee";
     }
 
@@ -66,7 +66,7 @@ public class EmployeeController {
         employee.setPassword(StringUtil.md5(pass));
         response.setCharacterEncoding("utf-8");
         employeeService.save(employee);
-        rs.addFlashAttribute("msg",MessageConstant.EDIT_SUSSCESS);
+        rs.addFlashAttribute("msg",MessageConstant.EDIT_SUCCESS);
         return "redirect:/manager/employee";
     }
 
@@ -84,10 +84,10 @@ public class EmployeeController {
     public String deleteAccountForm(@RequestParam long id, RedirectAttributes rs) {
         try{
             employeeService.delete(id);
-            rs.addFlashAttribute("msg", MessageConstant.DELETE_SUSSCESS);
+            rs.addFlashAttribute("msg", MessageConstant.DELETE_SUCCESS);
             return "redirect:/manager/employee";
         }catch (Exception e){
-            rs.addFlashAttribute("msg_err", MessageConstant.DELETE_SUSSCESS);
+            rs.addFlashAttribute("msg_err", MessageConstant.DELETE_SUCCESS);
             return "redirect:/manager/employee";
         }
     }

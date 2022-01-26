@@ -37,7 +37,7 @@ public class CheckupController {
         if (checkup.getStatus()!=0){
             checkupService.handle(id);
             shiftService.handle(idshift);
-            re.addFlashAttribute("msg", MessageConstant.HANDLE);
+            re.addFlashAttribute("msg", MessageConstant.HANDLE_SUCCESS);
         }else {
             re.addFlashAttribute("msg_err", MessageConstant.HANDLE_ERR);
         }

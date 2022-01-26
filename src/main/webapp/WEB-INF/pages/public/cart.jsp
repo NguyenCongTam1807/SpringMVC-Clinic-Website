@@ -56,7 +56,7 @@
                         <p class="quantity text-center ml-150 bg-white">${cart.quantity}</p>
                       </div></td>
                       <td>${cart.total} đ</td>
-                      <td class="remove-product"><a href="${pageContext.request.contextPath}/gio-hang/del?id=${cart.id}&orderId=${order.id}&total=${cart.total}&orderTotal=${order.total}"><i class="fas fa-trash-alt"></i></a></td>
+                      <td class="remove-product"><a href="${pageContext.request.contextPath}/gio-hang/del?id=${cart.id}&checkupId=${checkup.id}&total=${cart.total}&checkupTotal=${checkup.total}"><i class="fas fa-trash-alt"></i></a></td>
                     </tr>
                   </c:forEach>
                 </c:when>

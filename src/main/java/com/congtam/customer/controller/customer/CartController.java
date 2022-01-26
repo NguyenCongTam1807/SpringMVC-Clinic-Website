@@ -39,7 +39,7 @@ public class CartController {
     public void modelAtr(Model model, HttpSession session){
         Employee employee = (Employee) session.getAttribute("employee");
         List<CheckupDetail> list = new ArrayList<>();
-        Checkup checkup = new Checkup();
+        Checkup checkup;
         if (employee!=null){
             checkup = checkupService.findCheckupByUserId(employee.getId());
             if ( checkup!= null && checkup.getStatus()==0){
@@ -66,7 +66,7 @@ public class CartController {
         try{
             checkupService.editTotal(checkupTotal-total,checkupId);
             checkupDetailService.delete(id);
-            re.addFlashAttribute("msg", MessageConstant.DELETE_SUSSCESS);
+            re.addFlashAttribute("msg", MessageConstant.DELETE_SUCCESS);
         }catch (Exception e){
             re.addFlashAttribute("msg", MessageConstant.DELETE_ERROR);
             return "redirect:/gio-hang?err=1";
@@ -114,11 +114,9 @@ public class CartController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-        System.out.println("thành công");
+        
         checkupService.pay(id);
-        re.addFlashAttribute("msg",MessageConstant.PAY_SUSSCESS);
+        re.addFlashAttribute("msg",MessageConstant.PAY_SUCCESS);
         return "redirect:/gio-hang";
     }
 }

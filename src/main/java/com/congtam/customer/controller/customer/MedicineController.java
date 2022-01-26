@@ -32,12 +32,12 @@ public class MedicineController {
     public void modelAtr(Model model, HttpSession session){
         Employee employee = (Employee) session.getAttribute("employee");
         List<CheckupDetail> list = new ArrayList<>();
-        Checkup order = new Checkup();
+        Checkup checkup;
         if (employee!=null){
-            order = checkupService.findCheckupByUserId(employee.getId());
-            if ( order!= null && order.getStatus()==0){
-                list = orderDetailService.findAllByCheckupDetailId(order.getId());
-                model.addAttribute("order",order);
+            checkup = checkupService.findCheckupByUserId(employee.getId());
+            if ( checkup!= null && checkup.getStatus()==0){
+                list = orderDetailService.findAllByCheckupDetailId(checkup.getId());
+                model.addAttribute("checkup",checkup);
             }
         }else {
             list=null;

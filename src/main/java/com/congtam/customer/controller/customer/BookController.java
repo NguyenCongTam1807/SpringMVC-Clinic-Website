@@ -23,14 +23,14 @@ public class BookController {
     private CheckupService checkupService;
     @Autowired private CheckupDetailService checkupDetailService;
     @Autowired private Medicine_TypeService categoryService;
-    @Autowired private AppoimentTimeService appoimentTimeService;
+    @Autowired private AppointmentTimeService appointmentTimeService;
     @Autowired private ShiftService shiftService;
 
     @ModelAttribute
     public void modelAtr(Model model, HttpSession session){
         Employee employee = (Employee) session.getAttribute("employee");
         List<CheckupDetail> list = new ArrayList<>();
-        Checkup checkup = new Checkup();
+        Checkup checkup;
         if (employee!=null){
             checkup = checkupService.findCheckupByUserId(employee.getId());
             if ( checkup!= null && checkup.getStatus()==0){
@@ -40,7 +40,7 @@ public class BookController {
         }else {
             list=null;
         }
-        model.addAttribute("listatime",appoimentTimeService.listAll());
+        model.addAttribute("listatime", appointmentTimeService.listAll());
         model.addAttribute("listCart",list);
         model.addAttribute("listCategory", categoryService.listAll());
     }
@@ -54,7 +54,7 @@ public class BookController {
     public String appointmentTime(@RequestParam String name,@RequestParam String email,@RequestParam String phone
             ,@RequestParam int time,@RequestParam String message){
         shiftService.insertShift(name,email,message,phone);
-                appoimentTimeService.bookAppointmentTime(time);
+                appointmentTimeService.bookAppointmentTime(time);
         return "public/success";
     }
 }

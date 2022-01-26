@@ -17,23 +17,23 @@
 
 <section class="page-section-ptb">
     <div class="container">
-        <c:if test="${not empty roomActive}">
-            <h3 class="text-danger">${roomActive}</h3>
+        <c:if test="${not empty patientActive}">
+            <h3 class="text-danger">${patientActive}</h3>
         </c:if>
         <div class="row">
-            <c:forEach items="${listRoom}" var="room">
+            <c:forEach items="${listShift}" var="shift">
                 <c:choose>
-                    <c:when test="${room.active == 0}">
+                    <c:when test="${shift.active == 0}">
                         <div class="col-4">
-                            <form action="${pageContext.request.contextPath}/benh-nhan?id=${room.id}" method="post">
-                                <input class="btn btn-block btn-dark  pt-4 pb-4 mb-4" onclick="return myFunction()" type="submit" value="${room.name}">
+                            <form action="${pageContext.request.contextPath}/benh-nhan?id=${shift.id}" method="post">
+                                <input class="btn btn-block btn-dark  pt-4 pb-4 mb-4" onclick="return myFunction()" type="submit" value="${shift.name}">
                             </form>
                         </div>
                     </c:when>
-                    <c:when test="${room.active == 1}">
+                    <c:when test="${shift.active == 1}">
                         <div class="col-4">
-                            <form action="${pageContext.request.contextPath}/benh-nhan?id=${room.id}" method="post">
-                                <input class="btn btn-block btn-dark pt-4 pb-4 mb-4" type="submit" value="${room.name}" disabled>
+                            <form action="${pageContext.request.contextPath}/benh-nhan?id=${shift.id}" method="post">
+                                <input class="btn btn-block btn-dark pt-4 pb-4 mb-4" type="submit" value="${shift.name}" disabled>
                             </form>
                         </div>
                     </c:when>

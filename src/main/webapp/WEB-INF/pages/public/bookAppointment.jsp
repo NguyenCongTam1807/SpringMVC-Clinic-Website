@@ -63,7 +63,7 @@
                                 <div class="row">
                                     <div class="col">
                                         <div class="form-group">
-                                            <input type="text" name="phone" class="form-control" placeholder="Số điện thoại">
+                                            <input type="tel" name="phone" pattern="[0-9]{10}" class="form-control" placeholder="Số điện thoại">
                                         </div>
                                     </div>
                                 </div>
@@ -80,9 +80,6 @@
                                                 </c:if>
                                             </c:forEach>
                                         </select>
-<%--                                        <div class="form-group">--%>
-<%--                                            <input type="text" class="form-control" placeholder="Số điện thoại">--%>
-<%--                                        </div>--%>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -99,10 +96,7 @@
 </section>
 
 <script>
-    function myFunction() {
-        // document.getElementById("demo").innerHTML = "Hello World";
-        confirm("Bạn chắc chọn phòng này!!!");
-    }
+
 </script>
 
 <jsp:include page="./_footer.jsp"></jsp:include>

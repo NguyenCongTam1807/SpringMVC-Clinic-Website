@@ -84,7 +84,7 @@ public class MedicineController {
                             medicine_imgService.save(medicine_img);
                         }
                     }
-                    re.addFlashAttribute("msg", MessageConstant.ADD_SUSSCESS);
+                    re.addFlashAttribute("msg", MessageConstant.ADD_SUCCESS);
                 }else {
                     return "redirect:/dang-nhap";
                 }
@@ -125,7 +125,7 @@ public class MedicineController {
                         medicine_imgService.save(medicine_img);
                     }
                 }
-                re.addFlashAttribute("msg", MessageConstant.EDIT_SUSSCESS);
+                re.addFlashAttribute("msg", MessageConstant.EDIT_SUCCESS);
             } catch (Exception e) {
                 System.out.println("lỗi:====================");
             }
@@ -159,7 +159,7 @@ public class MedicineController {
         try{
             medicine_imgService.deleteProduct_imgByProductId(id);
             medicineService.delete(id);
-            rs.addFlashAttribute("msg",MessageConstant.DELETE_SUSSCESS);
+            rs.addFlashAttribute("msg",MessageConstant.DELETE_SUCCESS);
             return "redirect:/manager/medicine";
         }catch (Exception e){
             rs.addFlashAttribute("msg_err",MessageConstant.DELETE_ERROR);

@@ -215,7 +215,7 @@
 
                     reader.onload = function(event) {
                         $($.parseHTML('<img>')).attr('src', event.target.result).appendTo(placeToInsertImagePreview);
-                        $($.parseHTML('<span>')).text(input.files[i].name).appendTo(placeToInsertImagePreview);
+                        $($.parseHTML('<span>')).text("Preview Image").appendTo(placeToInsertImagePreview);
                     }
 
                     reader.readAsDataURL(input.files[i]);

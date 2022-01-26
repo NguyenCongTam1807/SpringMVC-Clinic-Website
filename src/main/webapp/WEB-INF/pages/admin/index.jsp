@@ -430,7 +430,7 @@
 </div>
 
 <script>
-    document.getElementById("roomActive").classList.add('active');
+    document.getElementById("patientActive").classList.add('active');
 </script>
 
 <!-- Bootstrap core JavaScript-->
