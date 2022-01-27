@@ -34,8 +34,8 @@ public class EmployeeService {
         return repo.login(email, password);
     }
 
-    public void register(String email,String pass,String name) {
-        repo.register(email,pass,name);
+    public void register(String email,String pass,String name, String address, String phoneNumber) {
+        repo.register(email,pass,name, address, phoneNumber);
     }
 
     public void editPass(String pass,long id) {

@@ -33,8 +33,10 @@ public class RegisterController {
     @RequestMapping(value = "/dang-ky", method = RequestMethod.POST)
     public String registerpost(@RequestParam("name")String name,
                         @RequestParam("email") String email,
-                        @RequestParam("password") String password) {
-        employeeService.register(email, StringUtil.md5(password),name);
+                        @RequestParam("password") String password,
+                       @RequestParam("address") String address,
+                       @RequestParam("phone") String phoneNumber) {
+        employeeService.register(email, StringUtil.md5(password),name, address, phoneNumber);
         return "redirect:/dang-nhap";
     }
 

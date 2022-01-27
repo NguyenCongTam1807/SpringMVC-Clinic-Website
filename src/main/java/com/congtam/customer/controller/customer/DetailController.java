@@ -30,7 +30,7 @@ public class DetailController {
     public void modelAtr(Model model, HttpSession session){
         Employee employee = (Employee) session.getAttribute("employee");
         List<CheckupDetail> list = new ArrayList<>();
-        Checkup order = new Checkup();
+        Checkup order;
         if (employee!=null){
             order = checkupService.findCheckupByUserId(employee.getId());
             if ( order!= null && order.getStatus()==0){

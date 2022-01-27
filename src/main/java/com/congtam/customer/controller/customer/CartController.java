@@ -114,7 +114,7 @@ public class CartController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        
+
         checkupService.pay(id);
         re.addFlashAttribute("msg",MessageConstant.PAY_SUCCESS);
         return "redirect:/gio-hang";

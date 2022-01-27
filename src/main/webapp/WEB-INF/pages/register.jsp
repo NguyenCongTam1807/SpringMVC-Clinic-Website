@@ -62,7 +62,7 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <input type="text" name="email" class="form-control form-control-user"
-                                                   id="exampleRepeatEmail" placeholder="Email">
+                                                   id="exampleEmail" placeholder="Email">
                                         </div>
                                     </div>
 
@@ -74,6 +74,19 @@
                                         <div class="col-sm-6">
                                             <input type="password" name="repassword" class="form-control form-control-user"
                                                    id="exampleRepeatPassword" placeholder="Nhập lại mật khẩu">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-sm-12 mb-6 mb-sm-0">
+                                            <input type="text" name="address" class="form-control form-control-user"
+                                                   id="exampleAdress" placeholder="Địa chỉ">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input type="tel" name="phone" class="form-control form-control-user"
+                                                   id="examplePhoneNumber" placeholder="Số điện thoại">
                                         </div>
                                     </div>
                                     <button type="submit" onclick="submitForm();" class="btn btn-primary btn-user btn-block">
@@ -134,6 +147,14 @@
                         minlength: 6,
                         maxlength: 30,
                         equalTo: '[name="password"]'
+                    },
+                    "address":{
+                      required:true,
+                      maxlength:255
+                    },
+                    "phone":{
+                        required:true,
+                        exactlength:10
                     }
                 },
             messages:
@@ -156,6 +177,14 @@
                         minlength: "Tối thiểu 6 kí tự",
                         maxlength: "Tối đa 30 kí tự",
                         equalTo: "Mật khẩu không khớp"
+                    },
+                    "address":{
+                        required:"Vui lòng nhập địa chỉ",
+                        maxlength:"Tối đa 255 ký tự",
+                    },
+                    "phone":{
+                        required:"Vui lòng nhập số điện thoại",
+                        exactlength:"Vui lòng nhập đúng 10 chữ số"
                     }
                 }
         });
